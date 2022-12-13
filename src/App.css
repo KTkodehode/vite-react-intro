@@ -1,0 +1,75 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.App {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.kodeHode {
+  font-size: 40px;
+}
+.papa{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(0, 0, 0);
+}
+body {
+  margin: 0;
+  background: linear-gradient(90deg, rgba(103,104,204,1) 16%, rgba(122,208,109,1) 50%, rgba(182,94,94,1) 89%);
+}
+.myFilter {
+  background-color: rgb(30, 161, 139);
+  height: 100px;
+  transition: all 0.5s ease;
+}
+.myFilter:hover {
+  transform: scale(1.2);  
+  filter: invert(55%) sepia(60%) saturate(2914%) hue-rotate(157deg) brightness(89%) contrast(102%);
+}
+.myFilter p {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: larger;
+}
+#littleOne {
+  color: orangered;
+}
