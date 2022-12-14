@@ -1,15 +1,26 @@
 import './App.css';
 import React from 'react';
 
+// Components
+import Card from './components/Card'
+
+console.log(Card)
+// Data 
+import { cardInfo } from './data/data'
+
+console.log(cardInfo)
+
+
 function App() {
   return (
+  
     <div className="App">
       {/* <Navbar title="Home" />
       <Navbar title="About" />
       <Navbar title="Contact" /> */}
 
       <MeComp name="Kenneth" text="React"/>
-      <Khode name="Kodehode" />
+      <Khode name="Kodehode" text="Frontend" />
       <MyFilter />
  
       <MyComponentParent>
@@ -23,8 +34,18 @@ function App() {
       </MyComponentParent>
       {/* <MyComponent name="CompOwnent" />
       <MyComponente name="World" /> */}
-    </div>
-
+<>
+    <main>
+    {cardInfo.map(
+          (element, index) => {
+            return (
+              <Card key={index} tittel={element.tittel} tekst={element.tekst} />
+            )
+          }
+        )}
+    </main>
+</> 
+    </div>   
   )
 }
 
@@ -45,8 +66,8 @@ function MeComp(props) {
   return <h1 className='myName'> My name is, {props.name} and I'm learning {props.text}!</h1>;
 }
 function Khode (props) {
-  const { name } = props
-  return <h1 className='kodeHode'> @ {name}!</h1>;
+  const { name, text } = props
+  return <h1 className='kodeHode'> @ {text} kurs, hos {name}</h1>;
 }
 
 function MyFilter () {
